@@ -33,18 +33,6 @@
 /processorParam:Quality=Best
 /build:Sounds/SFX/cardEffect.ogg
 
-#begin Textures/Backgrounds/Autum.jpg
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/Backgrounds/Autum.jpg
-
 #begin Textures/Backgrounds/Blue_Background.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -56,18 +44,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Backgrounds/Blue_Background.jpg
-
-#begin Textures/Buttons/BlackJackBtn.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/Buttons/BlackJackBtn.png
 
 #begin Textures/Buttons/Hit_Disabled.png
 /importer:TextureImporter
@@ -93,18 +69,6 @@
 /processorParam:TextureFormat=Color
 /build:Textures/Buttons/Hit_Enabled.png
 
-#begin Textures/Buttons/Home.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/Buttons/Home.png
-
 #begin Textures/Buttons/Replay.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -128,18 +92,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Textures/Buttons/Score_Back.png
-
-#begin Textures/Buttons/Solitaire.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:Textures/Buttons/Solitaire.png
 
 #begin Textures/Buttons/Stand_Disabled.png
 /importer:TextureImporter
