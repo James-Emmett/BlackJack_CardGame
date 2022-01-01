@@ -18,7 +18,7 @@ namespace CardGame
         ScoreBox            m_PlayerScoreBox;
         ScoreBox            m_DealerScoreBox;
         Button              m_Replay;
-        SpriteFont          m_SF_Calibri;
+        SpriteFont          m_GameFont;
         TurnState           m_TurnState;
         string              m_WinText = "";
         bool                m_Playing = false;
@@ -35,11 +35,11 @@ namespace CardGame
             m_Player.m_Hand.Position = new Vector2(960, 792);
 
             m_Dealer = new Dealer(m_Deck, content);
-            m_Dealer.m_Hand.Position = new Vector2(960, 217);
+            m_Dealer.m_Hand.Position = new Vector2(960, 230);
 
             m_PlayerScoreBox = new ScoreBox(content, new Vector2(960, 646));
             m_DealerScoreBox = new ScoreBox(content, new Vector2(960, 76));
-            m_SF_Calibri = content.Load<SpriteFont>("Fonts\\Calibri");
+            m_GameFont = content.Load<SpriteFont>("Fonts\\GameFont");
 
             Reset();
 
@@ -122,8 +122,8 @@ namespace CardGame
 
             if (m_Playing == false)
             {
-                Vector2 size = m_SF_Calibri.MeasureString(m_WinText);
-                spriteBatch.DrawString(m_SF_Calibri, m_WinText, new Vector2(960 - (size.X * 0.5f), 460 - (size.Y * 0.5f)), Color.White);
+                Vector2 size = m_GameFont.MeasureString(m_WinText);
+                spriteBatch.DrawString(m_GameFont, m_WinText, new Vector2(960 - (size.X * 0.5f), 460 - (size.Y * 0.5f)), Color.White);
                 m_Replay.Draw(spriteBatch);
             }
 

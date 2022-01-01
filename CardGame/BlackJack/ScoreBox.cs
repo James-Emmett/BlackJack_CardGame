@@ -27,7 +27,7 @@ namespace CardGame
         public void Draw(SpriteBatch spriteBatch)
         {
             m_ScoreBack.Draw(spriteBatch, Position);
-            spriteBatch.DrawString(m_SpriteFont, m_Text, new Vector2(Position.X - (m_TextSize.X * 0.5f), Position.Y - (m_TextSize.Y * 0.5f) + 8), Color.White);
+            spriteBatch.DrawString(m_SpriteFont, m_Text, new Vector2(Position.X - (m_TextSize.X * 0.5f), Position.Y - (m_TextSize.Y * 0.5f) + 4), Color.White);
         }
     }
 }
