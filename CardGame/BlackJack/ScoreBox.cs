@@ -20,7 +20,7 @@ namespace CardGame
         public ScoreBox(ContentManager content, Vector2 position)
         {
             m_ScoreBack = new Sprite(content.Load<Texture2D>("Textures\\Buttons\\Score_Back"));
-            m_SpriteFont = content.Load<SpriteFont>("Fonts\\Calibri");
+            m_SpriteFont = content.Load<SpriteFont>("Fonts\\GameFont");
             Position = position;
         }
 
