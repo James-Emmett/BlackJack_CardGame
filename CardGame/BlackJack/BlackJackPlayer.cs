@@ -1,13 +1,14 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CardGame
 {
     enum PlayerState { Playing, Stand, Bust}
+
+    /// <summary>
+    /// Abstract Player containing base requirments for creating a Black Jack Player.
+    /// </summary>
     abstract class BlackJackPlayer
     {
         public Deck m_Deck;
@@ -27,6 +28,9 @@ namespace CardGame
         public int Score() { return m_Hand.EvaluateHand(); }
     }
 
+    /// <summary>
+    /// Concrete Player providing user Input via buttons and runs User Logic.
+    /// </summary>
     class Player : BlackJackPlayer
     {
         Button m_Hit;
@@ -58,6 +62,9 @@ namespace CardGame
             base.Update(deltaTime);
         }
 
+        /// <summary>
+        /// Executes the Logic for a players turn
+        /// </summary>
         public override void RunLogic()
         {
             if (m_Hit.Clicked)
@@ -89,6 +96,9 @@ namespace CardGame
         }
     }
 
+    /// <summary>
+    /// Concrete Player for the AI running logic for the Dealer
+    /// </summary>
     class Dealer : BlackJackPlayer
     {
         const float ThinkTimer = 0.8f;
@@ -117,9 +127,15 @@ namespace CardGame
             base.Update(deltaTime);
         }
 
+        /// <summary>
+        /// Executes the logic for the dealer/AI
+        /// </summary>
         public override void RunLogic()
         {
+            // If its first time entering this round, then flip players card
             if(m_Flipped == false) { m_Hand.ShowCards(); SoundManager.PlayEffect("cardEffect"); m_Flipped = true; }
+            
+            // Timer to "Simulate" thinking.
             if(m_Timer <= 0)
             {
                 if (m_Hand.EvaluateHand() < 16)

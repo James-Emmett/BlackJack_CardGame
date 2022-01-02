@@ -6,6 +6,9 @@ using System.Text;
 
 namespace CardGame
 {
+    /// <summary>
+    /// Hand represents the players current cards, provides logic for evaluating score and drawing cards.
+    /// </summary>
     class Hand
     {
         List<Card>  m_Hand = new List<Card>();
@@ -14,6 +17,11 @@ namespace CardGame
 
         public Vector2 Position;
 
+        /// <summary>
+        /// Appends cards to a card list
+        /// </summary>
+        /// <param name="card">Card being added</param>
+        /// <param name="faceDown">Should this card be faced down?</param>
         public void AddCard(Card card, bool faceDown = false)
         {
             m_Hand.Add(card);
@@ -22,12 +30,20 @@ namespace CardGame
             card.FaceDown = faceDown;
         }
 
+        /// <summary>
+        /// Remove all cards from hand
+        /// </summary>
         public void Clear()
         {
             m_Hand.Clear();
             m_Dirty = true;
         }
 
+        /// <summary>
+        /// Evaluates the score of the cards in the hand.
+        /// </summary>
+        /// <param name="includeFaceDown">Weather facedown cards are invluded in the score tally.</param>
+        /// <returns>The score of the hand</returns>
         public int EvaluateHand(bool includeFaceDown = false)
         {
             if (m_Dirty)

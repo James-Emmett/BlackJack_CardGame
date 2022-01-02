@@ -30,24 +30,34 @@ namespace CardGame
         {
             m_CardAtlas = cardAtlas;
             m_CardBack  = cardBack;
-            m_ID    = id;
-            m_Suite = id / 13;
-            m_Rank  = id % 13;
-            m_IsRed = (m_Suite % 2) == 1;
-            m_Source = new Rectangle(CARD_WIDTH * m_Rank, CARD_HEIGHT * m_Suite, CARD_WIDTH, CARD_HEIGHT);
-            Origin = new Vector2(CARD_WIDTH * 0.5f, CARD_HEIGHT * 0.5f);
+            m_ID        = id;
+            m_Suite     = id / 13;
+            m_Rank      = id % 13;
+            m_IsRed     = (m_Suite % 2) == 1;
+            m_Source    = new Rectangle(CARD_WIDTH * m_Rank, CARD_HEIGHT * m_Suite, CARD_WIDTH, CARD_HEIGHT);
+            Origin      = new Vector2(CARD_WIDTH * 0.5f, CARD_HEIGHT * 0.5f);
         }
 
+        /// <summary>
+        /// Returns the ID a value between 0 and 51 representing the UniqueID of a card.
+        /// </summary>
         public int ID()
         {
             return m_ID;
         }
 
+        /// <summary>
+        /// Returns the Suite value of [0 = Clubs, 1 = Diamonds, 2 = spades, 3 = Hearts]
+        /// </summary>
         public int GetSuite()
         {
             return m_Suite;
         }
 
+        /// <summary>
+        /// Returns the rank, this is a value of [0 - 12] 
+        /// </summary>
+        /// <returns></returns>
         public int GetRank()
         {
             return m_Rank;

@@ -7,6 +7,9 @@ using Microsoft.Xna.Framework;
 
 namespace CardGame
 {
+    /// <summary>
+    /// Encapsulates the Graphics and Text rendering for a players score.
+    /// </summary>
     class ScoreBox
     {
         SpriteFont  m_SpriteFont;

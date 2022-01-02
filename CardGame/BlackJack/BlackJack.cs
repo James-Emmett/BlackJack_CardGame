@@ -1,10 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CardGame
 {
@@ -68,7 +64,7 @@ namespace CardGame
                     }
                     else if (m_Player.State == PlayerState.Bust)
                     {
-                        // Bust so just do score.
+                        // Player Bust so go straight to score
                         m_Playing = false;
                         m_TurnState = TurnState.None;
                         m_WinText = "Player Bust, Dealer Wins!!";
@@ -84,7 +80,7 @@ namespace CardGame
                     }
                     else if (m_Dealer.State == PlayerState.Bust)
                     {
-                        // Bust so just do score.
+                        // Dealer bust so go straight to end
                         m_TurnState = TurnState.None;
                         m_Playing = false;
                         m_WinText = "Dealer Bust, Player Wins!!";
@@ -130,6 +126,9 @@ namespace CardGame
             spriteBatch.End();
         }
 
+        /// <summary>
+        /// Checks for winner and sets the win text
+        /// </summary>
         public void EvaluateWinner()
         {
             if(m_Player.Score() > m_Dealer.Score())
@@ -148,7 +147,7 @@ namespace CardGame
             m_Playing = false;
         }
 
-
+        // Reset the state of the hands and deck for another round.
         public void Reset()
         {
             m_WinText = "";
